@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 import { DataStorageService } from "./../shared/data-storage.service";
 import { RecipeService } from "src/app/recipes/recipe.service";
+import { AuthService } from "src/app/auth/auth.service";
 
 @Component({
   selector: "app-header",
@@ -13,7 +14,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private dataService: DataStorageService,
-    private recipeService: RecipeService
+    private recipeService: RecipeService,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {}
@@ -29,5 +31,8 @@ export class HeaderComponent implements OnInit {
 
   onFetch() {
     this.dataService.getData();
+  }
+  onLogout() {
+    this.authService.signoutUser();
   }
 }

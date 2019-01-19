@@ -10,7 +10,6 @@ import { FooterComponent } from "./footer/footer.component";
 
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-edit.component";
-import { DropdownDirective } from "./shared/dropdown.directive";
 
 import { RecipeService } from "src/app/recipes/recipe.service";
 import { ShoppingListService } from "src/app/shopping-list/shopping-list.service";
@@ -20,6 +19,7 @@ import { SignupComponent } from "./auth/signup/signup.component";
 import { AuthService } from "src/app/auth/auth.service";
 import { AuthGuard } from "./auth/auth-guard.service";
 import { RecipesModule } from "src/app/recipes/recipe.module";
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,6 @@ import { RecipesModule } from "src/app/recipes/recipe.module";
     FooterComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
     SigninComponent,
     SignupComponent
   ],
@@ -37,7 +36,8 @@ import { RecipesModule } from "src/app/recipes/recipe.module";
     AppRoutingModule,
     FormsModule,
     HttpModule,
-    RecipesModule
+    RecipesModule,
+    SharedModule
   ],
   providers: [
     ShoppingListService,

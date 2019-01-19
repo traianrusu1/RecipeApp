@@ -1,4 +1,4 @@
-import { RecipeDetailComponent } from "src/app/recipes/recipe-detail/recipe-detail.component";
+import { RecipeDetailComponent } from "./recipe-detail/recipe-detail.component";
 import { AuthGuard } from "./../auth/auth-guard.service";
 import { RecipeEditComponent } from "./recipe-edit/recipe-edit.component";
 import { SelectRecipeComponent } from "./select-recipe/select-recipe.component";

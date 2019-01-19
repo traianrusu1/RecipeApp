@@ -8,35 +8,28 @@ import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 
-import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
-import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-edit.component";
-
-import { RecipeService } from "src/app/recipes/recipe.service";
-import { ShoppingListService } from "src/app/shopping-list/shopping-list.service";
-import { DataStorageService } from "src/app/shared/data-storage.service";
-import { SigninComponent } from "./auth/signin/signin.component";
-import { SignupComponent } from "./auth/signup/signup.component";
-import { AuthService } from "src/app/auth/auth.service";
+import { RecipeService } from "./recipes/recipe.service";
+import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { DataStorageService } from "./shared/data-storage.service";
+import { AuthService } from "./auth/auth.service";
 import { AuthGuard } from "./auth/auth-guard.service";
-import { RecipesModule } from "src/app/recipes/recipe.module";
-import { SharedModule } from 'src/app/shared/shared.module';
+
+import { RecipesModule } from "./recipes/recipe.module";
+import { ShoppingListModule } from "./shopping-list/shopping-list.module";
+import { SharedModule } from "./shared/shared.module";
+import { AuthModule } from "./auth/auth.module";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
-    SigninComponent,
-    SignupComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent],
   imports: [
     BrowserModule,
+    RecipesModule,
+    AuthModule,
+    ShoppingListModule,
     AppRoutingModule,
     FormsModule,
     HttpModule,
-    RecipesModule,
     SharedModule
   ],
   providers: [

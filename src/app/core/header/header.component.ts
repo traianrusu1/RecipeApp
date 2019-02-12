@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
-import { DataStorageService } from "./../shared/data-storage.service";
-import { RecipeService } from "src/app/recipes/recipe.service";
-import { AuthService } from "src/app/auth/auth.service";
+import { DataStorageService } from "../../shared/data-storage.service";
+import { RecipeService } from "../../recipes/recipe.service";
+import { AuthService } from "../../auth/auth.service";
 
 @Component({
   selector: "app-header",
@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
 
   onSave() {
     this.dataService.saveData(this.recipeService.getRecipes()).subscribe(
-      (response: any[]) => {
+      response => {
         console.log(response);
       },
       error => {}

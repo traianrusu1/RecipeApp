@@ -5,3 +5,7 @@ input.ng-invalid.ng-touched {
 .help-block {
   color: red;
 }
+
+h2 {
+  margin-bottom: 30px;
+}

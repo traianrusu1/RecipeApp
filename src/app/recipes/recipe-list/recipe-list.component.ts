@@ -8,7 +8,7 @@ import { Recipe } from "./../recipe.model";
 @Component({
   selector: "app-recipe-list",
   templateUrl: "./recipe-list.component.html",
-  styleUrls: ["./recipe-list.component.css"]
+  styleUrls: ["./recipe-list.component.css"],
 })
 export class RecipeListComponent implements OnInit, OnDestroy {
   recipes: Recipe[];
@@ -34,6 +34,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   }
 
   onNew() {
+    console.log("TEST");
     this.router.navigate(["new"], { relativeTo: this.activatedRoute });
   }
 }

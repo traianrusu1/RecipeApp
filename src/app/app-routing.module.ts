@@ -7,20 +7,21 @@ import { AuthGuard } from "./auth/auth-guard.service";
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    redirectTo: "recipes",
+    pathMatch: "full",
   },
   {
     path: "recipes",
-    loadChildren: "./recipes/recipes.module#RecipesModule"
+    loadChildren: "./recipes/recipes.module#RecipesModule",
   },
   {
     path: "shopping-list",
-    loadChildren: "./shopping-list/shopping-list.module#ShoppingListModule"
-  }
+    loadChildren: "./shopping-list/shopping-list.module#ShoppingListModule",
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

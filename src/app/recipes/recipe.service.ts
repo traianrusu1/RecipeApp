@@ -10,20 +10,20 @@ export class RecipeService {
   private recipes: Recipe[] = [
     new Recipe(
       "Burger",
-      "this is a test",
+      "A delicious hamburger with fries.",
       "https://www.readersdigest.ca/wp-content/uploads/sites/14/2015/11/gourmet-burger-1024x666.jpg",
       [
         new Ingredient("Buns", 2),
         new Ingredient("Mayo", 1),
-        new Ingredient("Hamburger Patty", 4)
+        new Ingredient("Hamburger Patty", 4),
       ]
     ),
     new Recipe(
       "Steak and Fries",
-      "this is a test 2",
+      "Perfectly cooked steak with fries",
       "https://upload.wikimedia.org/wikipedia/commons/3/3b/Flickr_-_cyclonebill_-_B%C3%B8f_med_pommes_frites_%281%29.jpg",
       [new Ingredient("Steak", 1), new Ingredient("Potatoes", 2)]
-    )
+    ),
   ];
 
   constructor(private shoppingListService: ShoppingListService) {}

@@ -1,4 +1,4 @@
-# Description
+## Description
 
 This is a recipe and shopping list app. You can add and save recipes, add and save shopping lists, export recipes into your shopping list with the click of a button!
 
